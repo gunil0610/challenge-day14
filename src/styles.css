@@ -5,5 +5,144 @@
 }
 
 body {
+  width: 100%;
+  height: 100%;
   background-color: #f8f8f8;
+}
+
+.camera,
+.gamecenter,
+.safari {
+  width: 600px;
+  height: 400px;
+  margin: 30px;
+  position: relative;
+}
+
+.app-screen {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.camera__app {
+  background-color: #029f92;
+}
+
+.gamecenter__app {
+  background-color: #f8a4a1;
+}
+
+.safari__app {
+  background-color: #d6f0f9;
+  transition: transform 0.5s ease-in-out;
+  transform-origin: 300px 70px;
+}
+
+.safari__app:hover {
+  transform: scale(0.5, 0.5);
+}
+
+.camera-img {
+  height: 150px;
+}
+
+.gamecenter-img {
+  height: 150px;
+  border-radius: 40px;
+}
+
+.safari-img {
+  height: 150px;
+}
+
+.black-screen {
+  height: 400px;
+  width: 600px;
+  background-color: #27394a;
+  z-index: -2;
+  position: absolute;
+  top: 0;
+}
+
+.camera .black-screen {
+  top: 20px;
+  left: 20px;
+  padding-top: 100px;
+  z-index: 2;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.camera:hover .black-screen {
+  opacity: 1;
+}
+
+.gamecenter {
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+}
+
+.gamecenter:hover img {
+  transform: translateY(-75px);
+}
+
+.gamecenter img {
+  transition: transform 0.5s ease-in-out;
+}
+
+.gamecenter:hover .black-screen {
+  transform: translateY(-150px);
+}
+
+.gamecenter .black-screen {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 600px;
+  height: 150px;
+  z-index: 2;
+  top: 400px;
+  padding: 25px 30px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.gamecenter .black-screen .bs__column:first-child {
+  margin-bottom: 25px;
+}
+
+.safari .black-screen {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 30px;
+}
+
+.title {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  color: #e7536d;
+  font-size: 25px;
+}
+
+.btn {
+  background-color: #e7536d;
+  color: white;
+  font-size: 25px;
+  line-height: 40px;
+  border: none;
+  cursor: pointer;
+  height: 50px;
+  width: 180px;
+  margin-top: 40px;
 }
